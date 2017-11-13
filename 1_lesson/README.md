@@ -226,7 +226,7 @@ reader = csv.DictReader(decodedCsv) # the reader object maps lines of the .csv i
 [TODO]
 
 ## Exercise
-Work on a [bibliography]((https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/1_lesson/titles.csv)) on punk music, released by the British Library as a .csv file.
+Work on a [bibliography](https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/1_lesson/titles.csv) on punk music, released by the British Library as a .csv file .
 
  * Print all titles sorted in alphabetical order. 
  * Print all the titles of references talking (somehow) about “Sex Pistols”
@@ -244,6 +244,6 @@ Work on a [bibliography]((https://raw.githubusercontent.com/marilenadaquino/comp
 ### References for the exercise
  * [urllib](https://docs.python.org/3/library/urllib.html) A python module to open URLs
  * [csv py module](https://docs.python.org/2/library/csv.html) A python module to read and write .csv files
- * [Counter](https://docs.python.org/2/library/collections.html#collections.Counter) A class of the module `collections` for counting items of a collection. It returns a dictionary whose keys are 
+ * [Counter](https://docs.python.org/2/library/collections.html#collections.Counter) A class of the module `collections` for counting items of a collection
  * [csv file](https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/1_lesson/titles.csv) original data is available at [British National Bibliography > Data Services](http://www.bl.uk/bibliographic/download.html#csvpunk)
  * [Chicago Style Manual](http://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-1.html) see *Bibliography entries (in alphabetical order)* for a reference
