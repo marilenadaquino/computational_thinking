@@ -92,7 +92,7 @@ a = 2
 ~~~~
 
 ### Data types
-##### Numbers
+##### Number
 There are three data types for representing numbers:
  * Integers `a = int(5)`
  * floating point numbers `a = float(5.0)`
@@ -189,6 +189,7 @@ The value of x is 2 and y is 3
 ##### Conditional statement
 A decision might be taken only when a specific condition is satisfied.
 There are several forms of if-else conditions. the simplest one is:
+
 **if-else**
 ~~~~
 num = 3
