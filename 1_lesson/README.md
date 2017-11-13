@@ -114,15 +114,34 @@ We can slice a string and retrieve a substring in a specific position. Index sta
 ##### List
 A list is an ordered sequence of items separated by comma inside square brackets:
 ~~~~
-myList = [1, 2, 3, ‘star’]
+myList = ['three', 'two', 'one']
 ~~~~
 We can slice a list and retrieve an item in a specific position. Index starts from 0 in Python:
 ~~~~
->>> myList[3]
-‘star’
+>>> myList[2]
+'one'
 ~~~~
+We can sort the list by using the method `sorted()`
+~~~~
+>>> myList = sorted(myList)
+>>> myList
+['one', 'two', 'three']
+~~~~
+We can add a new item to the end of the list by using the method `append()`
+~~~~
+>>> myList.append('star')
+>>> myList
+['one', 'two', 'three', 'star']
+~~~~
+We can count how many times items appear in a list using the class `Counter()`
+~~~~
+>>> count = Counter(myList)
+>>> count
+Counter({'one':1, 'two':1, 'three':1, 'star':1})
+~~~~
+
 ##### Dictionary
-An unordered collection of key-values pairs inside curly braces:
+An unordered collection of key-value pairs inside curly braces:
 ~~~~
 myDict = {‘first’: 1 ,’second’: 2 , ‘third’: 3}
 ~~~~
@@ -243,7 +262,7 @@ Work on a [bibliography](https://raw.githubusercontent.com/marilenadaquino/compu
 
 ### References for the exercise
  * [urllib](https://docs.python.org/3/library/urllib.html) A python module to open URLs
- * [csv py module](https://docs.python.org/2/library/csv.html) A python module to read and write .csv files
+ * [csv](https://docs.python.org/2/library/csv.html) A python module to read and write .csv files
  * [Counter](https://docs.python.org/2/library/collections.html#collections.Counter) A class of the module `collections` for counting items of a collection
  * [csv file](https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/1_lesson/titles.csv) original data is available at [British National Bibliography > Data Services](http://www.bl.uk/bibliographic/download.html#csvpunk)
  * [Chicago Style Manual](http://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-1.html) see *Bibliography entries (in alphabetical order)* for a reference
