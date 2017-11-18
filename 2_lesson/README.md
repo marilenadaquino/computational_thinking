@@ -71,7 +71,10 @@ Is a built-in function that accepts an *iterable* (a sequence) as argument and r
 ##### append()
 We have already seen the `append()` method, which appends to the end of a list a new item.
 ~~~~
-myList.append('end') 
+>>> myList = ['start', 'middle']
+>>> myList.append('end') 
+>>> print (myList)
+['start', 'middle', 'end']
 ~~~~
 ##### filter()
 Creates a list of elements for which a function returns true. It's used to filter sequences (e.g. lists) according to the rule expressed as argument.
