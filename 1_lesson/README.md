@@ -144,6 +144,14 @@ Keys can be used to retrieve values:
 >>> myDict[‘third’]
 3
 ~~~~
+
+##### Tuple
+Tuples are sequences, like lists, but cannot be changed unlike lists. Tuples use parentheses, whereas lists use square brackets.
+~~~~
+tup = (1, 2, 3, 4, 5)
+~~~~
+Values can be accessed with the usual slicing notation.
+
 ### Output
 We use the print() function to output data:
 ~~~~

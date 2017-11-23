@@ -9,7 +9,7 @@
  * [Links](#links)
 ## More on data types
 ### List 
-Python slicing notation `sliceable[start:stop:step]` enable us to access parts of data, and search for items in sequences, such as lists.
+Python slicing notation `sliceable[start:stop:step]` enables us to access parts of data, and search for items in sequences, such as lists.
 
  * **start** the beginning index of the slice, the first index is 0. If it's negative, it means to start n items from the end.
  * **stop** the ending index of the slice, it does not include the element at this index.
@@ -35,6 +35,8 @@ Since a set is an unordered collection, position is irrelevant and the slice ope
 
 ## Defining Functions
 A function is a group of statements that perform a task. Functions are useful to organize a program in small chunks.
+We use the keyword 'def' to introduce the name of the function. Between parentesis we have the arguments that we want to pass to the function, i.e., variables, default values, or none.
+As a good practice, we add a short summary about the aim of the function. A comment on more than one line can be written among ''' ''' or """ """
 ~~~~
 def greet(name):
 	"""This function greets to
@@ -46,7 +48,7 @@ Once defined a function it can be called with the required parameters
 >>> greet(‘guys’)
 Hello, guys. Good morning!
 ~~~~
-We use `return` to exit a function. It can contain statements that are evaluated and return a value
+When we don't want a result to be printed, but one or more variables as result, we use return to exit a function. It can contain statements that are evaluated and return a value.
 ~~~~
 def absolute_value(num):
 	"""This function returns the absolute
@@ -61,14 +63,8 @@ def absolute_value(num):
 
 ### Built-in functions
 We have built-in functions (Python) or user defined functions. Here below a list of some built-in functions useful to accomplish your task.
-##### enumerate()
-Is a built-in function that accepts an *iterable* (a sequence) as argument and returns an enumerate object, i.e., a tuple containing a count and a value from the iterable.
-~~~~
->>> seasons = ['Spring', 'Summer', 'Autumn', 'Winter']
->>> list(enumerate(seasons))
-[(0, 'Spring'), (1, 'Summer'), (2, 'Autumn'), (3, 'Winter')]
-~~~~
-##### append()
+
+##### append(x)
 We have already seen the `append()` method, which appends to the end of a list a new item.
 ~~~~
 >>> myList = ['start', 'middle']
@@ -76,7 +72,7 @@ We have already seen the `append()` method, which appends to the end of a list a
 >>> print (myList)
 ['start', 'middle', 'end']
 ~~~~
-##### filter()
+##### filter(function, iterable)
 Creates a list of elements for which a function returns true. It's used to filter sequences (e.g. lists) according to the rule expressed as argument.
 ~~~~
 >>> myList = ['', 'one', 'three', '', 'two']
@@ -84,20 +80,20 @@ Creates a list of elements for which a function returns true. It's used to filte
 >>> print(myList)
 ['one', 'three', 'two']
 ~~~~
-##### len()
+##### len(s)
 Returns the number of items (i.e., the length) of an object (e.g. string, list, dictionary)
 ~~~~
 >>> myList = ['', 'one', 'three', '', 'two']
 >>> print(len(myList))
 5
 ~~~~
-##### range()
+##### range(start, stop[, step])
 The `range()` function can be used to generate a sequence of numbers. It's arguments are `range(start,stop,step)`. 
 ~~~~
 >>> list(range(0,10))
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ~~~~
-##### split()
+##### split(sep=None, maxsplit=-1)
 `split()` returns a list of words in a string. It takes as argument the separator. 
 It can be iterated over lists.
 ~~~~
@@ -110,11 +106,12 @@ Returns a new list for each iterated list item
 ['Belsito, Peter ', ' Davis, Bob'] 
 ['Alexandersson, Gunvor ', ' Lundquist, Lena']
 ~~~~
-##### join()
+##### join(iterable)
 `join()` returns a string which is the concatenation of the strings included in an iterable object.
 ~~~~
 >>> for au in splitList:
->>>     auth = ';'.join(au for au in splitList)
+>>> 	splitList = auth.split(';')
+>>>     auth = 'and'.join(au for au in splitList)
 ~~~~
 Returns the original list
 ~~~~
@@ -128,7 +125,7 @@ Returns the original list
 >>> print(s.replace('is','was'))
 'thwas was an example'
 ~~~~
-##### zip()
+##### zip(*iterables)
 `zip()` aggregates items from multiple iterable objects
 ~~~~
 >>> x = [1, 2, 3]
@@ -165,7 +162,7 @@ Both patterns and strings can be searched in strings by using methods included i
 >>> m.group(0)
 'def'
 ~~~~
-Among the operations, we ca nsubstitute strings or delete them.
+Among the operations, we can substitute strings or delete them.
 ~~~~
 >>> old_list = ['Gibbon, Peter [person]', 'Centret for udviklingsforskning (Denmark) [organisation]']
 >>> for auth in old_list:
@@ -174,7 +171,7 @@ old_list = ['Gibbon, Peter', 'Centret for udviklingsforskning']
 ~~~~
 ## Exercise
 Work on a [bibliography](https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/1_lesson/titles.csv) on punk music, released by the British Library as a .csv file . Define functions for solving the following problems:
- * Is there any duplicate in the list? Print the list of duplicate ISBN in the form `ISBN: number`
+ * Is there any duplicate in the list? Print the list of duplicates in the form `ISBN: number`
  * Can you delete duplicates from the dictionary?
  * Print references in [Chicago Style](http://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-1.html): 
  e.g. `LastName1, FirstName1, FirstName2 LastName2, and FirstNameN LastNameN. Title. City: Publisher, date.`
