@@ -158,7 +158,7 @@ We can also apply filters, e.g. we want this method to return only bigrams that 
 ## Exercise
 Work on a bunch of short [texts](https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/3_lesson/military.txt) recording listening experiences of military bands, published by the [LED project](led.kmi.open.ac.uk). We want to understand how to recognize a listening experience in a text, and which elements characterize a listening experience of a military band. 
 
-Define a function that print the following statistics:
+Define a function that prints the following statistics:
  * Total number of words
  * Lexical diversity: `numberOfUniqueWords / totalNumberOfWords`
  * Occurrences of the term `military`
