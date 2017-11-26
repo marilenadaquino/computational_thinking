@@ -177,5 +177,9 @@ Work on an [authority file of italian photographers](https://raw.githubuserconte
  * add a new field DESCRIPTION in results, and integrate the text from the element of the xml file returned by the lookup API of DBPedia
 
 ### References for the exercise
- * [Python scripts](https://github.com/ehanson8/viaf-dbpedia-reconciliation-python) for reconciling data against VIAF and DBpedia
+ * [Python script](https://github.com/ehanson8/viaf-dbpedia-reconciliation-python/dbpediaReconciliationGeneral.py) for reconciling data against DBpedia
+ * [DBPedia lookup Service](http://wiki.dbpedia.org/projects/dbpedia-lookup)
+ * [Requests](http://docs.python-requests.org/en/master/) py library for HTTP requests
+ * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) py library for web scraping
+ * [FuzzyWuzzy](https://pypi.python.org/pypi/fuzzywuzzy) py library for fuzzy string comparison
  * [csv file](https://raw.githubusercontent.com/marilenadaquino/computational_thinking/master/4_lesson/Authority-Photographers.csv) including a sample of an authority file of photographers
