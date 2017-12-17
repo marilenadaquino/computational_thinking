@@ -88,7 +88,7 @@ Double-click the file downloaded. Drag and drop the icon in `Application` folder
 **Windows**
 If during the installation you selected to create a shortcut on your desktop, double-click that shortcut. Otherwise, go to the `\<PyCharm\>\bin folder` (e.g. `C:\Program Files (x86)\JetBrains\PyCharm 2017.1\bin`) and run `pycharm.exe`, `pycharm64.exe`, or `pycharm.bat`.
 
-Once you have opened the editor select `Open` and open `4_lesson_3.py` script. 
+Once you have opened the editor select `Open` and open `2_lesson_3.py` script. 
 Now you need to configure the interpreter so as to run your python code. In the Project Interpreter page, expand the drop-down list of interpreters, and then choose `Show all`. In the list of interpreter types, choose `Configure local interpreter` and choose the one corresponding to your python version.
 Then you can run your code. Go to the menu `Run > Run` and select your project/interpreter.
 
