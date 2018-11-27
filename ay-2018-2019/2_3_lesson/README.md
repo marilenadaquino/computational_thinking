@@ -237,9 +237,9 @@ for val in numbers:
 ### Import modules
 Modules (containing Python definitions and statements) can be imported and reused.
 ~~~~
-import csv , urllib.request, urllib.error, urllib.parse , codecs
+import csv
 
-with open('titles.csv', 'r', errors='ignore') as csvfile:
+with open('titles.csv', 'r') as csvfile:
     reader = csv.DictReader(csvfile) 
     for row in reader: 
         print(row['Title'])
