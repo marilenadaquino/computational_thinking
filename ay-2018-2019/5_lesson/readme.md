@@ -260,3 +260,5 @@ Print the following statistics:
 
 ### Some guidelines, exercises and more advanced stuff
  * [NLTK python tutorial](https://pythonspot.com/en/tokenizing-words-and-sentences-with-nltk/)
+ * [NLTK How-to repository](http://www.nltk.org/howto/)
+ * [Stylometry with python](https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python#preparing-the-data-for-analysis)
