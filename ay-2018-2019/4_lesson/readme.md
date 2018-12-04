@@ -1,4 +1,4 @@
-# 3rd Lesson
+# 4th Lesson
 ## Table of Contents
  * [Dictionaries! Dictionaries! Dictionaries!](#dictionaries)
  * [JSON and Lists of Dictionaries](#JSON_and_Lists_of_Dictionaries)
