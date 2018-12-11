@@ -19,7 +19,7 @@ with open('military.txt') as my_dataFile:
 	clean_token_text = [w for w in token_text if w not in excludedPunct and w not in stopWordsList]
 	# instantiate the class Text for extracting statistics
 	tokens_to_be_analysed = Text(clean_token_text)
-	term = 'band'
+	term = 'military'
 	print('## total number of words:', len(tokens_to_be_analysed), '\n') 
 	print('## lexical diversity:', len(set(tokens_to_be_analysed)) / len(tokens_to_be_analysed), '\n')
 	print('## occurrences of the term "', term, '": ', tokens_to_be_analysed.count(term), '\n')
@@ -27,7 +27,7 @@ with open('military.txt') as my_dataFile:
 	print('\n## concordance of the term '+term+':') 
 	tokens_to_be_analysed.concordance(term, 75, sys.maxsize)
 	print('\n## similar words in the same context of "'+term+'":') 
-	tokens_to_be_analysed.similar(term)
+	tokens_to_be_analysed.similar('military')
 
 	# distribution of words in the cleaned corpus
 	print('## frequency distribution of the 100 most common words (without stopwords and punctuation):')

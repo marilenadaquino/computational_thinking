@@ -187,9 +187,9 @@ Frequency distribution can be defined as a function mapping from each sample to 
 >>> from nltk.probability import FreqDist
 >>> sent = 'This is an an example sentence'
 >>> fdist = FreqDist()
->>>	fdist = FreqDist(tokens_to_be_analysed)
->>>	for word,count in fdist.items():
->>>		print(word, 'appears n.', str(count), 'times')
+>>> fdist = FreqDist(tokens_to_be_analysed)
+>>> for word,count in fdist.items():
+>>>     print(word, 'appears n.', str(count), 'times')
 near appears n. 1 times
 like appears n. 5 times
 enveloped appears n. 1 times
