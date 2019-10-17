@@ -27,7 +27,7 @@ The download should start without any redirection.
 ## Install Python
 
 ### 1. Open the terminal / command prompt
-We'll install the latest version of Python (3.8) for your OS by using a shell (also called terminal (Mac) / command prompt (Windows).
+We'll install the latest version of Python (3.8) for your OS by using a shell, also called terminal (Mac) / command prompt (Windows).
 
 > > In computing, a [shell](https://en.wikipedia.org/wiki/Shell_(computing)) is a user interface for accessing services of an operating system. It can be a command-line interface (CLI) or a graphical user interface (GUI). It enables a user to perform several operations, such as file management, installations, run processes, monitor and configure OS. We'll use it to install packages and as an interpreter for python.
 
@@ -104,7 +104,6 @@ We can install python libraries by using `pip` in the shell.
 Great you already have `pip` installed! 
 
 * Type `pip --version` in the terminal to see which version is installed. 
-* If not installed, type `sudo apt-get install python3-pip` to install the latest version of pip.
 
 #### Windows
 
