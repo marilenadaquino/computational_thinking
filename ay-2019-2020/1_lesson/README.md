@@ -1,4 +1,4 @@
-# 2nd Lesson
+# Python introduction
 ## Table of Contents
  * [Introduction to Python](#introduction-to-python)
     * [Characteristics](#characteristics)
