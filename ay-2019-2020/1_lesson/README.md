@@ -156,38 +156,13 @@ We can add a new item to the end of the list by using the method `append()`
 ~~~~
 
 We can count how many elements are in a list by using `len()`
+
 ~~~~
 >>> myList_l = len(myList)
 >>> print(myList_l)
 4
 ~~~~
 
-
-We can count how many times items appear in a list using the class `Counter()`
-
-~~~~
->>> count = Counter(myList)
->>> count
-Counter({'one':1, 'two':1, 'three':1, 'star':1})
-~~~~
-
-##### Dictionary
-An unordered collection of key-value pairs inside curly braces:
-~~~~
-myDict = {‘first’: 1 ,’second’: 2 , ‘third’: 3}
-~~~~
-Keys can be used to retrieve values:
-~~~~
->>> myDict[‘third’]
-3
-~~~~
-
-##### Tuple
-Tuples are sequences, like lists, but cannot be changed unlike lists. Tuples use parentheses, whereas lists use square brackets.
-~~~~
-tup = (1, 2, 3, 4, 5)
-~~~~
-Values can be accessed with the usual slicing notation.
 
 ### Output
 We use the print() function to output data:
@@ -276,7 +251,7 @@ else:
 
 ##### For loop
 
-Interating over a sequence (e.g. accessing all the elements included in a list or a dictionary) is useful when working on data.
+Interating over a sequence (e.g. accessing all the elements included in a list) is useful when working on data.
 
 ~~~~
 # List of numbers
@@ -302,18 +277,16 @@ Consider the following column headings:
 
 ### 1. Import modules
 
-Modules (containing Python definitions and statements) can be imported and reused. In this class we import `csv` library and the method `Counter` from the library `collections`
+Modules (containing Python definitions and statements) can be imported and reused. In this class we import `csv` library.
 
 ~~~~
 import csv
-from collections import Counter
 ~~~~
 
 ### 2. Open a CSV file
 
 ~~~~
 import csv
-from collections import Counter
 
 with open('titles.csv', 'r', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile) # each row of the file is a list
@@ -323,7 +296,6 @@ with open('titles.csv', 'r', encoding='utf-8') as csvfile:
 
 ~~~~
 import csv
-from collections import Counter
 
 with open('titles.csv', 'r', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile) 
@@ -335,7 +307,6 @@ with open('titles.csv', 'r', encoding='utf-8') as csvfile:
 
 ~~~~
 import csv
-from collections import Counter
 
 with open('titles.csv', 'r', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile) 
@@ -349,7 +320,6 @@ with open('titles.csv', 'r', encoding='utf-8') as csvfile:
  2. Print all titles sorted in alphabetical order 
  3. Print all the titles of references talking _somehow_ about Sex Pistols, i.e. including the words "Sex Pistols"
  4. Print all the titles of references published after 2000
- 5. Count references grouped by language. Print results in the form: `Language : count`
 
 ## Links
 ### Introduction to Python

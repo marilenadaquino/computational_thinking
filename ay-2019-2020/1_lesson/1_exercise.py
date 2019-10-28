@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import csv , sys
-from collections import Counter
 
 # prepare lists including results
 listTitles = [] 
@@ -33,7 +32,3 @@ print(sexPistols)
 # 4. Print all the titles of references published after 2000
 print(after2000)
 
-# 5. Count references grouped by language. Print results in the form: `Language : count`
-count_languages = Counter(languages)
-for key, value in count_languages.items(): 
-    print(key + " : " + str(value) )
