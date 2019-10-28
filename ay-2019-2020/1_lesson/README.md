@@ -290,33 +290,70 @@ for val in numbers:
 	sum = sum+val
 ~~~~
 
-### Import modules
+
+## Exercise
+Work on a [bibliography](titles.csv) on punk music, released by the British Library as a .csv file .
+
+Consider the following column headings:
+
+~~~~
+"Title","Other titles","BL record ID","Type of resource","Content type","Material type","BNB number","ISBN","Name","Dates associated with name","Type of name","Role","All names","Series title","Number within series","Country of publication","Place of publication","Publisher","Date of publication","Edition","Physical description","Dewey classification","BL shelfmark","Topics","Genre","Languages","Notes"
+~~~~
+
+### 1. Import modules
 
 Modules (containing Python definitions and statements) can be imported and reused. In this class we import `csv` library and the method `Counter` from the library `collections`
 
 ~~~~
 import csv
 from collections import Counter
-
-with open('titles.csv', 'r') as csvfile:
-    reader = csv.DictReader(csvfile) 
-    for row in reader: 
-        print(row['Title'])
 ~~~~
 
-Ps/ we will see next time what `row['Title']` specifically means.
+### 2. Open a CSV file
 
-## Exercise
-Work on a [bibliography](titles.csv) on punk music, released by the British Library as a .csv file .
+~~~~
+import csv
+from collections import Counter
 
- * Print all titles
- * Print all titles sorted in alphabetical order. 
- * Print all the titles of references talking _somehow_ about Sex Pistols, i.e. including the words "Sex Pistols".
- * Print all the titles of references published after 2000.
- * Count references grouped by language. Print results in the form: `Language : count`
+with open('titles.csv', 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile) # each row of the file is a list
+~~~~
+
+### 3. Iterate over rows
+
+~~~~
+import csv
+from collections import Counter
+
+with open('titles.csv', 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile) 
+    for row in reader: # access each row / list of the file at the same time
+        print(row[0])
+~~~~
+
+### 4. Access values of lists
+
+~~~~
+import csv
+from collections import Counter
+
+with open('titles.csv', 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile) 
+    for row in reader: 
+        print(row[0]) # access the first value of every list and print
+~~~~
+
+### 5. DIY
+
+ 1. Print all titles
+ 2. Print all titles sorted in alphabetical order 
+ 3. Print all the titles of references talking _somehow_ about Sex Pistols, i.e. including the words "Sex Pistols"
+ 4. Print all the titles of references published after 2000
+ 5. Count references grouped by language. Print results in the form: `Language : count`
 
 ## Links
 ### Introduction to Python
  * [Python tutorial](https://www.programiz.com/python-programming/) The official Python Tutorial
+ * [Reading csv with Python](https://realpython.com/python-csv/)
  * [Folgert Karsdorp. Python Programming for Humaninities](https://www.karsdorp.io/python-course/) A series of tutorials for accomplishing text processing tasks in python
  * [The programming historian](https://programminghistorian.org/en/lessons/?topic=python) A moderate-advanced guide to accomplish common tasks in the Humanities with Python (and other languages)

@@ -1,4 +1,5 @@
-import csv  
+# -*- coding: utf-8 -*-
+import csv , sys
 from collections import Counter
 
 # prepare lists including results
@@ -7,24 +8,32 @@ sexPistols = []
 after2000 = [] 
 languages = []
 
-# open a csv file
-with open('titles.csv', 'r') as myfile:
-	# create a dictionary
-    reader = csv.DictReader(myfile)    
-    # iterate over rows of the csv file -- over key/value of the dictionary
-    for row in reader: 
-        listTitles.append(row['Title'])
-        if ("sex pistols" in row['Title'].lower() ) or ("sex pistols" in row['Other titles'].lower()) or ("sex pistols" in row['Topics'].lower()):
-        	sexPistols.append(row['Title'])
-        if int(row["Date of publication"]) >=2000:
-        	after2000.append(row["Title"])
-        languages.append(row["Languages"])
 
-# print all titles sorted alphabetically
+with open('titles.csv', 'r', encoding="utf8") as myfile: # open a csv file
+    sys.stdout
+    reader = csv.reader(myfile) # each row of the file is a list
+    for row in reader: # access each row / list of the file at the same time
+        listTitles.append(row[0])
+        if ("sex pistols" in row[0].lower() ) or ("sex pistols" in row[1].lower()) or ("sex pistols" in row[23].lower()):
+        	sexPistols.append(row[0])
+        if int(row[18]) >=2000:
+        	after2000.append(row[0])
+        languages.append(row[25])
+
+# 1. Print all titles
+print(listTitles)
+
+# 2. Print all titles sorted in alphabetical order 
 sortedListTitles = sorted(listTitles)
-# print(sortedListTitles)
-# print(sexPistols)
+print(sortedListTitles)
 
+# 3. Print all the titles of references talking _somehow_ about Sex Pistols, i.e. including the words "Sex Pistols"
+print(sexPistols)
+
+# 4. Print all the titles of references published after 2000
+print(after2000)
+
+# 5. Count references grouped by language. Print results in the form: `Language : count`
 count_languages = Counter(languages)
 for key, value in count_languages.items(): 
-    print(key + " is the language of " + str(value) + " books ")
+    print(key + " : " + str(value) )
