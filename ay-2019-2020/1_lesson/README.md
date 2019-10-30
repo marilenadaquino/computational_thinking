@@ -167,11 +167,14 @@ We can count how many elements are in a list by using `len()`
 ### Output
 We use the print() function to output data:
 ~~~~
->>> print(myDict[‘third’])
-3
+>>> print(myDict[0])
+one
 
->>> print(‘the value is:’, myDict[‘third’])
-the value is: 3
+>>> print(‘the value is:’, myDict[0])
+the value is: one
+
+>>> print(‘the value is:’+myDict[0])
+the value is:one
 
 >>> x = 2 ; y = 3
 >>> print('The value of x is {} and y is {}'.format(x,y))
@@ -277,7 +280,7 @@ Consider the following column headings:
 
 ### 1. Import modules
 
-Modules (containing Python definitions and statements) can be imported and reused. In this class we import `csv` library.
+Modules (containing Python functions) can be imported and reused. In this class we import `csv` library.
 
 ~~~~
 import csv
