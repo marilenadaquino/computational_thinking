@@ -167,13 +167,13 @@ We can count how many elements are in a list by using `len()`
 ### Output
 We use the print() function to output data:
 ~~~~
->>> print(myDict[0])
+>>> print(myList[0])
 one
 
->>> print(‘the value is:’, myDict[0])
+>>> print(‘the value is:’, myList[0])
 the value is: one
 
->>> print(‘the value is:’+myDict[0])
+>>> print(‘the value is:’+myList[0])
 the value is:one
 
 >>> x = 2 ; y = 3
