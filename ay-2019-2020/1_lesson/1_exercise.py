@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import csv , sys
+import csv 
 
 # prepare lists including results
 listTitles = [] 
@@ -9,7 +9,6 @@ languages = []
 
 
 with open('titles.csv', 'r', encoding="utf8") as myfile: # open a csv file
-    sys.stdout
     reader = csv.reader(myfile) # each row of the file is a list
     for row in reader: # access each row / list of the file at the same time
         listTitles.append(row[0])
