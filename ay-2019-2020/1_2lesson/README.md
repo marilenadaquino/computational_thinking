@@ -14,7 +14,7 @@
 
 ## Introduction to Python
 
-[Guido Van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) wrote Python as a hobby programming project back in the late 1980s. He was fond of watching the famous comedy series - The Monty Python's [Flying Circus](https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus) - hence, he chose the name Python. 
+[Guido Van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) wrote Python as a hobby programming project back in the late 1980s. He was fond of watching the famous comedy series - The Monty Python's [Flying Circus](https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus) - hence, he chose the name Python.
 
 [Python](https://www.python.org/) is a multipurpose, high-level, object-oriented, interactive, interpreted and extremely user-friendly programming language.
 
@@ -48,36 +48,36 @@ a = 2
 
 There are few keywords that cannot be used for naming variables:
 
-`False` `class` `finally` `is` `return` 
-`None` `continue` `for` `lambda` `try` `True` `def` 
-`from` `nonlocal` `while` `and` `del` `global` 
-`not` `with` `as` `elif` `if` `or` `yield` `assert` 
+`False` `class` `finally` `is` `return`
+`None` `continue` `for` `lambda` `try` `True` `def`
+`from` `nonlocal` `while` `and` `del` `global`
+`not` `with` `as` `elif` `if` `or` `yield` `assert`
 `else` `import` `pass` `break` `except` `in` `raise`
 
-Python is case sensitive: 
+Python is case sensitive:
 
 ~~~~
 variable != Variable
 ~~~~
 
-There are few good practises and rules for writing identifiers and variables: 
- * Combine lowercase letters (`a-z`) uppercase letters (`A-Z`), digits (`1-9`) and underscore (`_`) 
+There are few good practises and rules for writing identifiers and variables:
+ * Combine lowercase letters (`a-z`) uppercase letters (`A-Z`), digits (`1-9`) and underscore (`_`)
  * Use camelCase(`thisIsMyVariable`) or underscore to separate words (`this_is_my_variable`)
  * Can not start with a digit or contain a special symbol (`|£$%@# etc.`)
  * Use names that make sense `count = 10` rather than `c = 10`
 
 ##### Punctuation and indentation
-There’s no need to add punctuation at the end of lines. 
+There’s no need to add punctuation at the end of lines.
 
 ~~~~
 a = 2
-b = 3 
+b = 3
 ~~~~
 
 We can use semicolons whether we want to put multiple statements in a single line:
 
 ~~~~
-a = 2 ; b = 3 
+a = 2 ; b = 3
 ~~~~
 
 We use indentation to separate code blocks (use tabs or 4 whitespaces)
@@ -123,7 +123,7 @@ We can slice a string and retrieve a substring in a specific position. *Index st
 ‘his’
 ~~~~
 
-N.B. `>>>` are here included in snippets in order to distinguish code from output. They **DO NOT** need to be typed :) 
+N.B. `>>>` are here included in snippets in order to distinguish code from output. They **DO NOT** need to be typed :)
 
 ##### List
 A list is an ordered sequence of items separated by comma inside square brackets:
@@ -301,7 +301,7 @@ with open('titles.csv', 'r', encoding='utf-8') as csvfile:
 import csv
 
 with open('titles.csv', 'r', encoding='utf-8') as csvfile:
-    reader = csv.reader(csvfile) 
+    reader = csv.reader(csvfile)
     for row in reader: # access each row / list of the file at the same time
         print(row[0])
 ~~~~
@@ -312,21 +312,23 @@ with open('titles.csv', 'r', encoding='utf-8') as csvfile:
 import csv
 
 with open('titles.csv', 'r', encoding='utf-8') as csvfile:
-    reader = csv.reader(csvfile) 
-    for row in reader: 
+    reader = csv.reader(csvfile)
+    for row in reader:
         print(row[0]) # access the first value of every list and print
 ~~~~
 
 ### 5. DIY
 
  1. Print all titles
- 2. Print all titles sorted in alphabetical order 
+ 2. Print all titles sorted in alphabetical order
  3. Print all the titles of references talking _somehow_ about Sex Pistols, i.e. including the words "Sex Pistols"
  4. Print all the titles of references published after 2000
+ 5. Print all the titles of references published after 2000 that are written in english
+ 6. Print all the authors' names (without repetitions)
 
 ## Links
 ### Introduction to Python
  * [Python tutorial](https://www.programiz.com/python-programming/) The official Python Tutorial
  * [Reading csv with Python](https://realpython.com/python-csv/)
- * [Folgert Karsdorp. Python Programming for Humaninities](https://www.karsdorp.io/python-course/) A series of tutorials for accomplishing text processing tasks in python
+ * [Folgert Karsdorp. Python Programming for Humanities](https://www.karsdorp.io/python-course/) A series of tutorials for accomplishing text processing tasks in python
  * [The programming historian](https://programminghistorian.org/en/lessons/?topic=python) A moderate-advanced guide to accomplish common tasks in the Humanities with Python (and other languages)
