@@ -114,6 +114,7 @@ Look at the list of bibliographic resources related to Harry Potter preserved at
  ~~~~
  
 **Problems to solve by your own**: 
+
  * how to append tuples to a list? 
  * how to remove duplicate tuples (e.g. `(Type_of_topic1 , Topic1)`) 
 

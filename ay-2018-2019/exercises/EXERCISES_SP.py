@@ -7,7 +7,7 @@ def is_odd(int_number):
 	else:
 		return False
 
-print 'checking numbers:', is_odd(2) 
+print('checking numbers:', is_odd(2)) 
 
 # Floor division
 def floor_division(dividend, divisor):
@@ -18,7 +18,7 @@ def floor_division(dividend, divisor):
 	implementation."""
 	return int(dividend/divisor)
 
-print 'Floor division:', floor_division(5,2) 
+print('Floor division:', floor_division(5,2)) 
 
 # Finding the maximum
 def find_max(number_collection):
@@ -30,7 +30,7 @@ def find_max(number_collection):
 			max_value = num
 	return max_value
 
-print 'Finding the maximum:', find_max([1,2,3,4,5,6,7,8])
+print('Finding the maximum:', find_max([1,2,3,4,5,6,7,8]))
 
 #Finding the minimum
 def find_min(number_collection):
@@ -43,7 +43,7 @@ def find_min(number_collection):
 			min_value = num
 	return min_value
 
-print 'Finding the maximum:', find_min([1,2,3,4,5,6,7,8])
+print('Finding the maximum:', find_min([1,2,3,4,5,6,7,8]))
 
 # Prime factorization (brute force)
 def prime_factorization(n):
@@ -65,7 +65,7 @@ def prime_factorization(n):
 	from collections import Counter
 	return Counter(factors)
 
-print 'Prime factorization:', prime_factorization(60) 
+print('Prime factorization:', prime_factorization(60) )
 
 # Palindromos
 def is_palindromic(word):
@@ -76,7 +76,7 @@ def is_palindromic(word):
 		return True
 	else:
 		return False
-print "Palindromos:", is_palindromic('anna')
+print("Palindromos:", is_palindromic('anna'))
 
 # Common substring (dynamic programming)
 # discussion: https://stackoverflow.com/questions/18715688/find-common-substring-between-two-strings
@@ -99,7 +99,7 @@ def longest_common_substring(string1, string2):
 				match = ""
 	return answer
 
-print "Common substring: '"+ longest_common_substring("this is new, guys!", "it is new, fellows!")+ "'"
+print("Common substring: '"+ longest_common_substring("this is new, guys!", "it is new, fellows!")+ "'")
 
 # String distance
 # explanation: https://www.python-course.eu/levenshtein_distance.php
@@ -120,7 +120,7 @@ def levenshtein_distance(s1, s2):
 		cost = 1
 	res = min([levenshtein_distance(s1[:-1], s2)+1, levenshtein_distance(s1, s2[:-1])+1, levenshtein_distance(s1[:-1], s2[:-1]) + cost])
 	return res
-print "String distance:", levenshtein_distance("house", "home")
+print("String distance:", levenshtein_distance("house", "home"))
 
 
 # Another distance metric for strings
@@ -142,4 +142,54 @@ def hamming_distance(s1, s2):
 	else:
 		return s2
 
-print "Another distance metric for strings:", hamming_distance('house','cause')
+print("Another distance metric for strings:", hamming_distance('house','cause'))
+
+
+# List items as keys in a dictionary
+def algorithm(dictionary, key_list):
+	"""Write the function def algorithm(dictionary, key_list) that takes a dictionary and a
+	list of strings as input and checks if each string in the list is a key of a pair in the dictionary. All
+	the values of the pairs in the dictionary that have been matched by any key contained in the
+	input list are added to a set, that is returned at the end of the algorithm."""
+	set_keys_in_list = set()
+	for key in key_list:
+		if key in dictionary.keys() and key not in set_keys_in_list:
+			set_keys_in_list.add(dictionary[key])
+
+	return list(set_keys_in_list)
+
+myDict = {}
+myDict['hello'] = 'world'
+myDict['goodbye'] = 'world'
+myDict['nice'] = 'to meet you'
+
+myList = ['hello', 'hello again', 'to meet you', 'goodbye', 'nice',]
+print("List items as keys in a dictionary:", algorithm(myDict, myList))
+
+
+# Binary search
+def binary_search(desired_item, items, start=0, end=None):
+	"""Write the function def binary_search(item, ordered_list, start, end), that
+	takes an item to search (i.e. item), an ordered list and a starting and ending positions in the list
+	as input, and returns the position of item in the list if it is included in it, and None otherwise. The
+	approach implemented by the binary search is described as follows. First, it checks if the middle
+	element of the list between start and end (included) is equal to item, and returns its position
+	in this case. Otherwise:
+	1. if the middle element is lesser than item, the search is executed in the part of the list
+	that follows the middle element; otherwise,
+	2. if the middle element is greater than item the search is executed in the part of the list
+	that precedes the middle element."""
+	if end == None:
+		end = len(items)
+	if start == end:
+		raise ValueError("%s was not found in the list." % desired_item)
+	pos = (end - start) // 2 + start
+	if desired_item == items[pos]: # middle element
+		return pos
+	elif desired_item < items[pos]: # if the middle element is lesser than item
+		return binary_search(desired_item, items, start=start, end=pos)      
+	else: # if the middle element is greater than item
+		 return binary_search( desired_item, items,start=(pos + 1), end=end)
+
+print("Binary search:", binary_search(5, [1,2,3,4,5,3,4,5]))
+print("Binary search:", binary_search(5, [1,2,3,4,5,3,4,5], 4))

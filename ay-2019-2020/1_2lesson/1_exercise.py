@@ -2,23 +2,33 @@
 import csv
 
 # prepare lists including results
-listTitles = []
+listTitles = list()
+sortedTitles = []
 sexPistols = []
 after2000 = []
 languagesafter2000 = []
 uniqueAuthors = []
+setAuthors = set()
 
 with open('titles.csv', 'r', encoding="utf8") as myfile: # open a csv file
     reader = csv.reader(myfile) # each row of the file is a list
     for row in reader: # access each row / list of the file at the same time
         listTitles.append(row[0])
-        if ("sex pistols" in row[0].lower() ) or ("sex pistols" in row[1].lower()) or ("sex pistols" in row[23].lower()):
+        if int(row[18]) > 2000 and "english" in row[25].lower():
+            print(row[0])
+
+        if ("sex pistols" in row[0].lower()) or ("sex pistols" in row[1].lower()) or ("sex pistols" in row[23].lower()):
         	sexPistols.append(row[0])
         if int(row[18]) >=2000:
         	after2000.append(row[0])
         if row[25] == 'English' and int(row[18]) >=2000:
             languagesafter2000.append(row[0])
         author = row[8]
+        setAuthors.add(author)
+
+
+
+
         if author not in uniqueAuthors:
             uniqueAuthors.append(author)
 

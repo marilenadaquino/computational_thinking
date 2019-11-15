@@ -18,7 +18,7 @@ with open('military.txt') as my_dataFile:
 	# remove stopwords and punctuation. Create a new list with list comprehension
 	clean_token_text = [w for w in token_text if w not in excludedPunct and w not in stopWordsList]
 	# instantiate the class Text for extracting statistics
-	tokens_to_be_analysed = Text(clean_token_text)
+	tokens_to_be_analysed = Text(token_text)
 	term = 'military'
 	print('## total number of words:', len(tokens_to_be_analysed), '\n') 
 	print('## lexical diversity:', len(set(tokens_to_be_analysed)) / len(tokens_to_be_analysed), '\n')

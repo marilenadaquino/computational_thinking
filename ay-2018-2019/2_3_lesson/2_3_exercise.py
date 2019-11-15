@@ -25,7 +25,6 @@ sortedListTitles = sorted(listTitles)
 # print(sortedListTitles)
 # print(sexPistols)
 
-
 count_languages = Counter(languages)
 for key, value in count_languages.items(): 
     print(key + " is the language of " + str(value) + " books ")
